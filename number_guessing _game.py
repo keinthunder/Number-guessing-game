@@ -1,13 +1,15 @@
+print("🎮 Welcome to the Number Guessing Game!")
+print("Guess a number between 1 and 100.\n")
 import random
-a=random.randint(1,100)
+secret_number=random.randint(1,100)
 Tries=0
 while True:
     Tries+=1
-    Hum=int(input('enter your number between 1-100'))
+    guess=int(input('enter your number between 1-100'))
     if Hum==a:
-        print('congrats u won🎉\nYour tries are',Tries)
+        print("Congratulations! 🎉 You guessed the correct number in", Tries, "tries.")
         break
     elif Hum>a:
-        print("sry wrong guess go a little lower😅🔻")
+        print("Too high! 📉 Try a smaller number")
     else:
-        print("sry wrong guess go a little above😅🔺")
+        print("Too low! 📈 Try a larger number")
